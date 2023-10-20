@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule alfanuméricos</title>
+    <style>
+        .bt{
+            margin: 5px;/*usado para definir a margem externa de um elemento*/
+        }
+        body{
+        text-align: center;/*usando para alinhar o texto*/
+        }
+    </style>
+    <script>
+    function operacao(){//função que ira executar quando apertar o botão "Calcular".
+var a=eval(document.formcalc.t1.value); // função eval( ) atribuindo já o valor numérico as suas respectivas variáveis.
+var b=eval(document.formcalc.t2.value);
+var c=a+b;
+alert("O Resultado da operação é -> "+c); //o resultado é exibida na caixa de saída com o alert( )
+}
+    </script>
+</head>
+<body>
+    <form name="formcalc">
+        <h3><center>Cálculo em JavaScript</h3>
+        Digite o primeiro número:<input type="text" name="t1" size="4" maxlenght="4"><!-- Testo e caixa para inserção de valores  -->
+        <br><br>
+        Digite o segundo número:<input type="text" name="t2" size="4" maxlenght="4">  <!-- Testo e caixa para inserção de valores  -->
+        <br><br><hr><br><br>
+        <input type="button" name="bt1" value="Calcular" onclick="operacao()"><!-- Chamada da função calculo( ) em Javascript  -->
+        &nbsp&nbsp
+      <input type="reset" name="bt2" value="Cancelar" onclick="document.formcalc.t1.focus()">  <!-- Limpando o dados digitados  -->
+        &nbsp&nbsp
+        <input type="button" name="bt3" value="Fechar" onclick="window.close()"></center><!-- Limpando o dados digitados  -->
+        </from>
+</body>
+</html>
